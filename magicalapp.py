@@ -1,3 +1,5 @@
+import json
+
 import requests
 import os
 
@@ -13,4 +15,8 @@ def magicalapp_sign():
     }
 
     res = requests.get(url=url, headers=headers)
-    print(res.status_code, res.text)
+    msg = json.dumps({
+        "status_code": res.status_code,
+        "response_text": res.text
+    })
+    print(msg)
