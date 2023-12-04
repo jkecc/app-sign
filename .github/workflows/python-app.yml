@@ -36,3 +36,4 @@ jobs:
         python main.py
       env:
         MAGICALAPP_TOKEN: ${{ secrets.MAGICALAPP_TOKEN }}
+        MT_APP_AUTH: ${{ secrets.MT_APP_AUTH }}
